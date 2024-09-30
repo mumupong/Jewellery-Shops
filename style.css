@@ -9,13 +9,14 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background-color: #f5f5f5;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 /* ヘッダーのスタイル */
 header {
   background-color: #333;
-  padding: 15px 0;
+  padding: 20px;
   text-align: center;
 }
 
@@ -54,47 +55,109 @@ nav ul li a:hover {
 .hero img {
   width: 100%;
   height: auto;
+  filter: brightness(70%); /* 画像を少し暗くしてテキストを強調 */
 }
 
 .hero-text {
   position: absolute;
-  top: 50%;
+  bottom: 5%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   color: white;
+  text-align: center;
   background: rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.hero-text h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 15px;
 }
 
 .cta-button {
-  background-color: #ff6347;
-  padding: 10px 20px;
+  background-color: #ff69b4;
+  padding: 8px 16px;
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #ff4500;
+  background-color: #ff1493;
+}
+
+/* フィルターセクションのスタイル */
+.filter {
+  padding: 40px 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.filters label {
+  font-size: 1rem;
+}
+
+.filters select {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.filter-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filter-button:hover {
+  background-color: #555;
 }
 
 /* 商品一覧のスタイル */
 .products {
-  padding: 40px 0;
+  padding: 50px 0;
   text-align: center;
+  background-color: #fff;
+}
+
+.products h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 
 .product-grid {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .product-item {
   background-color: white;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 250px;
 }
@@ -104,6 +167,16 @@ nav ul li a:hover {
   height: auto;
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
+}
+
+.product-item h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.product-item p {
+  color: #ff1493;
+  font-size: 1.1rem;
 }
 
 .product-button {
@@ -120,54 +193,77 @@ nav ul li a:hover {
   background-color: #555;
 }
 
-/* 広告バナーのスタイル */
-.ad-banner {
+/* 誕生石特集セクション */
+.feature {
+  padding: 40px 20px;
+  background-color: #ffebcd;
   text-align: center;
-  margin: 40px 0;
 }
 
-.ad-banner img {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
+.feature h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.ad-button {
+.feature p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.feature .cta-button {
+  background-color: #ff69b4;
   padding: 10px 20px;
-  background-color: #ff6347;
   color: white;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
+  text-decoration: none;
   border-radius: 5px;
 }
 
-.ad-button:hover {
-  background-color: #ff4500;
+.feature .cta-button:hover {
+  background-color: #ff1493;
 }
 
 /* フッターのスタイル */
 footer {
   background-color: #333;
   color: white;
-  padding: 10px 0;
+  padding: 20px 0;
   text-align: center;
 }
 
 /* レスポンシブデザイン */
 @media only screen and (max-width: 600px) {
   nav ul li {
-    display: block;
-    margin: 10px 0;
+      display: block;
+      margin: 10px 0;
+  }
+
+  .hero-text {
+      width: 90%;
+      bottom: 3%;
+      padding: 8px 15px;
+  }
+
+  .hero-text h1 {
+      font-size: 1.5rem;
+  }
+
+  .hero-text p {
+      font-size: 0.9rem;
   }
 
   .product-grid {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   .product-item {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+  }
+
+  .filters {
+      flex-direction: column;
+      gap: 10px;
   }
 }
+

@@ -1,32 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jewelry Shop</title>
+    <title>カラーストーンジュエリーショップ</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <!-- ヘッダーとナビゲーションバー -->
 <header>
-    <div class="logo">Jewelry Shop</div>
+    <div class="logo">カラーストーンジュエリー</div>
     <nav>
         <ul>
             <li><a href="#">ネックレス</a></li>
             <li><a href="#">リング</a></li>
             <li><a href="#">ピアス</a></li>
-            <li><a href="#">キャンペーン</a></li>
+            <li><a href="#">誕生石特集</a></li>
         </ul>
     </nav>
 </header>
 
 <!-- メインビジュアル -->
 <section class="hero">
-    <img src="image/500×500px.png" alt="ジュエリーメインビジュアル">
+    <img src="image/hero5.jpg" alt="カラーストーンジュエリー">
     <div class="hero-text">
-        <h1>輝きを放つジュエリーコレクション</h1>
-        <p>最新のトレンドを今すぐチェック</p>
-        <a href="#" class="cta-button">詳細を見る</a>
+        <h1>特別な石で輝きを</h1>
+        <p>情熱や希望、石が持つ力を身につけて、日々をもっと豊かに。</p>
+        <a href="#" class="cta-button">コレクションを見る</a>
+    </div>
+</section>
+
+<!-- フィルターセクション -->
+<section class="filter">
+    <h2>ジュエリーを探す</h2>
+    <div class="filters">
+        <label for="stone">石の種類:</label>
+        <select id="stone">
+            <option value="all">全て</option>
+            <option value="ruby">ルビー</option>
+            <option value="emerald">エメラルド</option>
+            <option value="sapphire">サファイア</option>
+        </select>
+
+        <label for="item">アイテム:</label>
+        <select id="item">
+            <option value="all">全て</option>
+            <option value="necklace">ネックレス</option>
+            <option value="ring">リング</option>
+            <option value="earrings">ピアス</option>
+        </select>
+
+        <label for="material">素材:</label>
+        <select id="material">
+            <option value="all">全て</option>
+            <option value="gold">ゴールド</option>
+            <option value="silver">シルバー</option>
+            <option value="platinum">プラチナ</option>
+        </select>
+
+        <label for="sort">並び替え:</label>
+        <select id="sort">
+            <option value="popularity">人気順</option>
+            <option value="price-asc">価格が安い順</option>
+            <option value="price-desc">価格が高い順</option>
+        </select>
+
+        <button class="filter-button">検索</button>
     </div>
 </section>
 
@@ -35,38 +74,10 @@
     <h2>おすすめ商品</h2>
     <div class="product-grid">
         <div class="product-item">
-            <img src="image/500×500px.png" alt="ネックレス">
-            <h3>ゴールドネックレス</h3>
-            <p>¥50,000</p>
-            <a href="商品ページ.html" class="product-button">商品詳細</a>
+            <img src="image/ruby-necklace.jpg" alt="ルビーネックレス">
+            <h3>ルビーネックレス</h3>
+            <p>¥80,000</p>
+            <a href="#" class="product-button">詳細を見る</a>
         </div>
         <div class="product-item">
-            <img src="image/500×500px.png" alt="リング">
-            <h3>ダイヤモンドリング</h3>
-            <p>¥100,000</p>
-            <a href="商品ページ.html" class="product-button">商品詳細</a>
-        </div>
-        <div class="product-item">
-            <img src="image/500×500px.png" alt="ピアス">
-            <h3>パールピアス</h3>
-            <p>¥30,000</p>
-            <a href="商品ページ.html" class="product-button">商品詳細</a>
-        </div>
-    </div>
-</section>
-
-<!-- 広告バナー -->
-<section class="ad-banner">
-    <img src="image/ad-banner.jpg" alt="キャンペーンバナー">
-    <button id="bannerClick" class="ad-button">今すぐチェック</button>
-</section>
-
-<!-- フッター -->
-<footer>
-    <p>&copy; 2024 Jewelry Shop - すべての権利を保有</p>
-</footer>
-
-<!-- JavaScriptの読み込み -->
-<script src="script.js"></script>
-</body>
-</html>
+            <img src="image/emerald-ring
